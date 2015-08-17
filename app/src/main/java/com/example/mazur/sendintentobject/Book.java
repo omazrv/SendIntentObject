@@ -14,18 +14,23 @@ public class Book implements Parcelable {
     public String getBookName() {
         return bookName;
     }
+
     public void setBookName(String bookName) {
         this.bookName = bookName;
     }
+
     public String getAuthor() {
         return author;
     }
+
     public void setAuthor(String author) {
         this.author = author;
     }
+
     public int getPublishTime() {
         return publishTime;
     }
+
     public void setPublishTime(int publishTime) {
         this.publishTime = publishTime;
     }
@@ -38,6 +43,7 @@ public class Book implements Parcelable {
             mBook.publishTime = source.readInt();
             return mBook;
         }
+
         public Book[] newArray(int size) {
             return new Book[size];
         }
@@ -46,6 +52,8 @@ public class Book implements Parcelable {
     public int describeContents() {
         return 0;
     }
+
+    @Override
     public void writeToParcel(Parcel parcel, int flags) {
         parcel.writeString(bookName);
         parcel.writeString(author);

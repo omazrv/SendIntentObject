@@ -7,16 +7,15 @@ import android.widget.TextView;
 /**
  * Created by Mazur on 13.08.2015.
  */
-public class ObjectTransDemoSerializable extends Activity {
-    @Override
+public class ParcelableExample extends Activity {
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         TextView mTextView = new TextView(this);
-        Person mPerson = (Person)getIntent().getSerializableExtra(MainActivity.SER_KEY);
-        mTextView.setText("You name is: " + mPerson.getName() + "/n" +
-                "You age is: " + mPerson.getAge());
-
+        Book mBook = getIntent().getParcelableExtra(MainActivity.PAR_KEY);
+        mTextView.setText("Book name is: " + mBook.getBookName() + "/n" +
+                "Author is: " + mBook.getAuthor() + "/n" +
+                "PublishTime is: " + mBook.getPublishTime());
         setContentView(mTextView);
     }
 }

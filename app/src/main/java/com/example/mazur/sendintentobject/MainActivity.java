@@ -29,7 +29,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         Person mPerson = new Person();
         mPerson.setName("Oleh");
         mPerson.setAge(30);
-        Intent mIntent = new Intent(this, ObjectTransDemoSerializable.class);
+        Intent mIntent = new Intent(this, SerializableExample.class);
         Bundle mBundle = new Bundle();
         mBundle.putSerializable(SER_KEY, mPerson);
         mIntent.putExtras(mBundle);
@@ -41,7 +41,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mBook.setBookName("Android Developer Guide");
         mBook.setAuthor("Oleh");
         mBook.setPublishTime(2015);
-        Intent mIntent = new Intent(this, ObjectTranDemoParcelable.class);
+        Intent mIntent = new Intent(this, ParcelableExample.class);
         Bundle mBundle = new Bundle();
         mBundle.putParcelable(PAR_KEY, mBook);
         mIntent.putExtras(mBundle);

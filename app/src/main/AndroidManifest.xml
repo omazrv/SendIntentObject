@@ -17,8 +17,8 @@
             </intent-filter>
 
         </activity>
-        <activity android:name=".ObjectTransDemoSerializable" />
-        <activity android:name=".ObjectTranDemoParcelable" />
+        <activity android:name=".SerializableExample" />
+        <activity android:name=".ParcelableExample" />
     </application>
 
 </manifest>
